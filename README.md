@@ -3,5 +3,5 @@
 ### Written using JS, CSS, HTML, Bootstrap and jQuery
 ## A site that allows user to order pizza
 ### Follow the link to navigate to the site:https://ennydin.github.io/IP4/
-### LICENSE: https://github.com/EnnyDin/Ip3/blob/master/LICENSE
+### LICENSE: https://github.com/EnnyDin/IP4/blob/main/LICENSE
 
