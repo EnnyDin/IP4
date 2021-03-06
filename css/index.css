@@ -1,0 +1,24 @@
+.top{
+    background-image: url('../images/photo-1589906493606-a6ca2a06078b.jpeg');
+    background-size:auto;
+    padding-top: 0%;
+    text-align: center;
+    background-position: center center;
+    max-width: 100%;
+    color: rgb(255, 255, 255);
+
+}
+#enn {font-family: "Times New Roman", Times, serif;}
+
+.intro{
+    background-image: url('../images/giphy.gif');
+    background-size:auto;
+    padding-top: 0%;
+    text-align: center;
+    background-position: center center;
+    max-width: 100%;
+    max-height: 100%;
+    color: white;
+
+
+}
