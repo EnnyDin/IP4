@@ -59,20 +59,19 @@
                 <label for="number">number of pizza's</label>
                 <input type="number" class="form-control" id="number" placeholder="Number of pizzas" min="1" required>
                 <br>
-                <a href="#summary">
                     <button type="submit" class="btn btn-light checkout" id="checkout">
-                        Checkout
+                        CHECKOUT
                     </button>
                 </a>
                 <div class="order-summary" id="sum-order">
-                    <h5 class="text-center" id="summary">Order Summary</h5>
+                    <h5 class="text-center" id="summary">YOUR ORDER</h5>
                     <h2 class="text-center summary"></h2>
                     <ol id="list" class="text-center sum">
                     </ol>
                 </div>
+                <div id="summary"></div>
                 <div class="d-block mx-auto text-center">
                     <button class='deliver'>Make Delivery</button>
-                   <!-- <button class='delivernot'>Pick Up</button>-->
                 </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

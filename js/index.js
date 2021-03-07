@@ -1,12 +1,5 @@
-//function Pizza(size, crust, toppings,price) {
-//    this.size = size;
-//    this.crust = crust;
-//    this.toppings= toppings;
-//    this.number = number;
-//    this.price = price;
-//  }
 
-  $("#checkout").click(function () {
+$("#checkout").click(function () {
     event.preventDefault();
     let size = $("#size option:selected").val();
     let crust = $("#crust option:selected").val();
@@ -15,33 +8,36 @@
     console.log(size,crust,toppings,number);
 })
 
-function myOrder(size, crust, toppings, number, totalPrice) {
-    return { size, crust, toppings, number, totalPrice};
-}
-   console.log(myOrder);
+
+  
+   if (size = "small") {
+    price = 300;
+   }else if (size = "medium") {
+    price = 600;    
+   }else if (size = "large"){
+
+       price = 1200;
+   }
+
+   document.getElementById("size").innerHTML
    function Size(small, medium, large){
        this.small = small;
        this.medium = medium;
        this.large = large;
    }
+   document.getElementById("number").innerHTML
+   number = $("#number").val();
 
-   
 Size.prototype.small =function(){
-    //size = "small";
-    price = 300; 
-   return price * number;
+   return (300 * number);
 }
 Size.prototype.medium =function(){
-    //size = "medium";
-    price = 600; 
-    return price * number;
+    return (600 * number);
 }
 Size.prototype.large =function(){
-    //size = "large";
-    price = 1200; 
-    return price * number;
+    return (1200 * number);
 }
-
+console.log(price * number);
 
 switch (toppings) {
     case toppings = "pepperoni":
@@ -69,20 +65,16 @@ switch (toppings) {
         totalPrice = totalPrice + 80;
         break;
 }
-    //console.log(totalPrice); 
        
-//    let newOrder = myOrder(size, crust, toppings, number, totalPrice);
-//    $('#list').text();
-//    $("#list").append(newOrder.f + "<br>" + "size :   "
-//        + newOrder.s + "<br>" + "crust :     "
-//        + newOrder.c + "<br>" + "toppings :     "
-//        + newOrder.t + "<br>" + " number :    "
-//        + newOrder.n + "<br>" + "totalPrice :  ")
-    $('#list').text();
-    $('#list').append()
+    let newOrder = (size, crust, toppings, number);
 
-
+$ ("#list").text();
+$ ("#list").append ("size" + "<br>" +
+ "crust" + "<br>" +
+ "toppings" + "<br>" +
+ "number")
 
     $(".deliver").click(function () {
         prompt ("PLEASE INPUT YOUR LOCATION");
-    })
+    });
+
