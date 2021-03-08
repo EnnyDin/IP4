@@ -6,10 +6,10 @@ function Pizza(size, crust, toppings) {
 
 $("#checkout").click(function () {
     event.preventDefault();
-    let size = $("#size option:selected").value();
-    let crust = $("#crust option:selected").value();
-    let toppings = $("#toppings option:selected").value();
-    let number = $("#number").value();
+    let size = $("#size option:selected").val();
+    let crust = $("#crust option:selected").val();
+    let toppings = $("#toppings option:selected").val();
+    let number = $("#number").val();
     console.log(size,crust,toppings,number);
 })
 
