@@ -1,13 +1,17 @@
+function Pizza(size, crust, toppings) {
+    this.size = size;
+    this.crust = crust;
+    this.toppings= toppings;
+  }
 
 $("#checkout").click(function () {
     event.preventDefault();
-    let size = $("#size option:selected").val();
-    let crust = $("#crust option:selected").val();
-    let toppings = $("#toppings option:selected").val();
-    let number = $("#number").val();
+    let size = $("#size option:selected").value();
+    let crust = $("#crust option:selected").value();
+    let toppings = $("#toppings option:selected").value();
+    let number = $("#number").value();
     console.log(size,crust,toppings,number);
 })
-
 
   
    if (size = "small") {
@@ -69,12 +73,12 @@ switch (toppings) {
     let newOrder = (size, crust, toppings, number);
 
 $ ("#list").text();
-$ ("#list").append ("size" + "<br>" +
- "crust" + "<br>" +
- "toppings" + "<br>" +
- "number")
+$ ("#list").append ("size: " + "<br>" +
+ "crust: " + "<br>" +
+ "toppings: " + "<br>" +
+ "number: ")
 
     $(".deliver").click(function () {
-        prompt ("PLEASE INPUT YOUR LOCATION");
+        prompt ("PLEASE INPUT YOUR LOCATION" + "delivery fee is Sh. 150");
     });
-
+    
