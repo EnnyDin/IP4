@@ -69,7 +69,6 @@ $("#checkout").click(function (event) {
 $(".deliver").click(function () {
     prompt ("PLEASE INPUT YOUR LOCATION" + "delivery fee is Sh. 150");
 });
-$('#list').text(" ");
 $("#list").append("<br>" + "flavour :   " 
     + newOrder.f + "<br>" + "size :   "
     + newOrder.s + "<br>" + "crust :     "
@@ -77,6 +76,5 @@ $("#list").append("<br>" + "flavour :   "
     + newOrder.t + "<br>" + " number of pizzas :    "
     + newOrder.n + "<br>" + "total :  "
     + newOrder.total + "<br>")
-    
 });
   
