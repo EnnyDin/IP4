@@ -1,84 +1,52 @@
-function Pizza(size, crust, toppings) {
-    this.size = size;
-    this.crust = crust;
-    this.toppings= toppings;
-  }
-
-$("#checkout").click(function () {
+$("#checkout").click(function (event) {
     event.preventDefault();
+    let flavour = $("#flavour option:selected").val();
     let size = $("#size option:selected").val();
     let crust = $("#crust option:selected").val();
-    let toppings = $("#toppings option:selected").val();
+    let topping = $("#toppings option:selected").val();
     let number = $("#number").val();
-    console.log(size,crust,toppings,number);
-})
+    console.log(size);
 
-  
-   if (size = "small") {
-    price = 300;
-   }else if (size = "medium") {
-    price = 600;    
-   }else if (size = "large"){
+    //Function order
+    let order = (f, s, c, t, n, total) => {
+        return {f, s, c, t, n, total};
+    };
 
-       price = 1200;
-   }
 
-   document.getElementById("size").innerHTML
-   function Size(small, medium, large){
-       this.small = small;
-       this.medium = medium;
-       this.large = large;
-   }
-   document.getElementById("number").innerHTML
-   number = $("#number").val();
+    switch (toppings) {
+        case toppings = "pepperoni":
+            totalPrice = totalPrice + 100;
+            break;
+        case toppings = "macon":
+            totalPrice = totalPrice + 150;
+            break;
+        case toppings = "steak":
+            totalPrice = totalPrice + 200;
+            break;
+        case toppings = "ham":
+            totalPrice = totalPrice + 100;
+            break;
+        case toppings = "cheese":
+            totalPrice = totalPrice + 100;
+            break;
+        case toppings = "onions":
+            totalPrice = totalPrice + 80;
+            break;
+        case toppings = "chilli":
+            totalPrice = totalPrice + 50;
+            break;
+        case toppings = "mushroom":
+            totalPrice = totalPrice + 80;
+            break;
+    }
 
-Size.prototype.small =function(){
-   return (300 * number);
-}
-Size.prototype.medium =function(){
-    return (600 * number);
-}
-Size.prototype.large =function(){
-    return (1200 * number);
-}
-console.log(price * number);
+    let newOrder = order(flavour, size, crust, topping, number,);
+    console.log(newOrder); // test func
 
-switch (toppings) {
-    case toppings = "pepperoni":
-        totalPrice = totalPrice + 100;
-        break;
-    case toppings = "macon":
-        totalPrice = totalPrice + 150;
-        break;
-    case toppings = "steak":
-        totalPrice = totalPrice + 200;
-        break;
-    case toppings = "ham":
-        totalPrice = totalPrice + 100;
-        break;
-    case toppings = "cheese":
-        totalPrice = totalPrice + 100;
-        break;
-    case toppings = "onions":
-        totalPrice = totalPrice + 80;
-        break;
-    case toppings = "chilli":
-        totalPrice = totalPrice + 50;
-        break;
-    case toppings = "mushroom":
-        totalPrice = totalPrice + 80;
-        break;
-}
-       
-    let newOrder = (size, crust, toppings, number);
-
-$ ("#list").text();
-$ ("#list").append ("size: " + "<br>" +
- "crust: " + "<br>" +
- "toppings: " + "<br>" +
- "number: ")
-
-    $(".deliver").click(function () {
-        prompt ("PLEASE INPUT YOUR LOCATION" + "delivery fee is Sh. 150");
-    });
-    
+    $('#list').text(" ");
+    $("#list").append("<br>" + "Flavour :   " + newOrder.f + "<br>" + "Size :   "
+        + newOrder.s + "<br>" + "Crust :     "
+        + newOrder.c + "<br>" + "Toppings :     "
+        + newOrder.t + "<br>" + " Number of pizzas :    "
+        + newOrder.n + "<br>" + "Total Price :  ")
+});

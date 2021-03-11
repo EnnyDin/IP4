@@ -1,4 +1,4 @@
-<html>
+8<html>
     <head>
         <title>ENDN PIZZERIA</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
@@ -28,13 +28,15 @@
             <div class="col-md-5">
                 <label>select size:</label><br>
                 <select class="custom-select custom-select-md mb-3" id="size" required>
+                    <option selected value="0">select size</option>
                     <option value="small">Small @Sh. 300</option>
                     <option value="medium">Medium @Sh. 600</option>
                     <option value="large">Large @Sh. 1200</option>
                 </select>
                 <form class="col-sm-5 offset-sm-3">
-                <label>select crust:</label>
-                <select class="custom-select custom-select-md mb-3" id="crust" required>
+                <label>select name:</label>
+                <select class="custom-select custom-select-md mb-3" id="flavour" required>
+                    <option selected value="0">select flavour</option>
                     <option value="vegtikka">Veg Tikka</option>
                     <option value="chickentikka">Chicken Tikka</option>
                     <option value="periperi">Peri-Peri Chicken</option>
@@ -44,8 +46,16 @@
                     <option value="mushroom">Chicken and Mushroom</option>
                     <option value="feast">Veg Feast</option>
                 </select>
+                <label for="crust">Choose Crust:</label>
+                <select class="custom-select custom-select-md mb-3" id="crust" required>
+                    <option selected value="0">select crust here</option>
+                    <option value="thin">Thin Crust @ Ksh. 100</option>
+                    <option value="thick">Thick Crust @ Ksh. 150</option>
+                    <option value="flatbread">FlatBread Crust @ sh. 180</option>
+                </select>
                 <label>select toppings</label>
                 <select class="custom-select custom-select-md mb-3" id="toppings" required>
+                    <option selected value="0">select toppings</option>
                     <option value="pepperoni">Xtra Pepperoni @Sh. 100</option>
                     <option value="macon">Xtra Macon @Sh. 150</option>
                     <option value="steak">Xtra BBQ Steak @Sh. 200</option>
