@@ -2,12 +2,13 @@ $("#checkout").click(function (event) {
     event.preventDefault();
     let flavour = $("#flavour option:selected").val();
     let size = $("#size option:selected").val();
+    let crust =$("#crust option:selected").val();
     let toppings = $("#toppings option:selected").val();
     let number = $("#number").val();
     console.log(size, flavour, toppings);
 
-    let order = (f, s, t, n, total) => {
-        return {f, s, t, n, total};
+    let order = (f, s,c , t, n, total) => {
+        return {f, s,c , t, n, total};
     };
     var price, total;
 
@@ -22,6 +23,16 @@ $("#checkout").click(function (event) {
 
     } 
     console.log(price);
+
+    if (crust == "thin") {
+        price= price + 100;
+    }else if (crust == "thick"){
+        price=price + 150;
+    }else if (crust=="flatbread"){
+        price=price + 180;
+    }else  {
+        return false;
+    }
     
     switch (toppings) {
         case toppings = "pepperoni":
@@ -51,7 +62,7 @@ $("#checkout").click(function (event) {
     }
     console.log(totalPrice);
 
-    let newOrder = order(flavour, size, toppings, number,totalPrice);
+    let newOrder = order(flavour, size,crust, toppings, number,totalPrice);
     console.log(newOrder); // test func
 
    
@@ -61,10 +72,11 @@ $(".deliver").click(function () {
 $('#list').text(" ");
 $("#list").append("<br>" + "flavour :   " 
     + newOrder.f + "<br>" + "size :   "
-    + newOrder.s + "<br>"
+    + newOrder.s + "<br>" + "crust :     "
     + newOrder.c + "<br>" + "toppings :     "
     + newOrder.t + "<br>" + " number of pizzas :    "
     + newOrder.n + "<br>" + "total :  "
     + newOrder.total + "<br>")
+    
 });
   
