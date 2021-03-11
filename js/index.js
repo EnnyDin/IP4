@@ -61,10 +61,10 @@ $(".deliver").click(function () {
 $('#list').text(" ");
 $("#list").append("<br>" + "flavour :   " 
     + newOrder.f + "<br>" + "size :   "
-    //+ newOrder.s + "<br>" + "crust :     "//
+    + newOrder.s + "<br>"
     + newOrder.c + "<br>" + "toppings :     "
     + newOrder.t + "<br>" + " number of pizzas :    "
     + newOrder.n + "<br>" + "total :  "
-    + newOrder.total + "<br>" )
+    + newOrder.total + "<br>")
 });
   
