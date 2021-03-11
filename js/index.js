@@ -13,6 +13,7 @@ $("#checkout").click(function (event) {
     };
 
 
+
     switch (toppings) {
         case toppings = "pepperoni":
             totalPrice = totalPrice + 100;
@@ -44,9 +45,9 @@ $("#checkout").click(function (event) {
     console.log(newOrder); // test func
 
     $('#list').text(" ");
-    $("#list").append("<br>" + "Flavour :   " + newOrder.f + "<br>" + "Size :   "
-        + newOrder.s + "<br>" + "Crust :     "
-        + newOrder.c + "<br>" + "Toppings :     "
-        + newOrder.t + "<br>" + " Number of pizzas :    "
-        + newOrder.n + "<br>" + "Total Price :  ")
+    $("#list").append("<br>" + "flavour :   " + newOrder.f + "<br>" + "size :   "
+        + newOrder.s + "<br>" + "crust :     "
+        + newOrder.c + "<br>" + "toppings :     "
+        + newOrder.t + "<br>" + " number of pizzas :    "
+        + newOrder.n + "<br>" + "total Price :  ")
 });
