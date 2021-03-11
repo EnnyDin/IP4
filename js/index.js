@@ -2,52 +2,69 @@ $("#checkout").click(function (event) {
     event.preventDefault();
     let flavour = $("#flavour option:selected").val();
     let size = $("#size option:selected").val();
-    let crust = $("#crust option:selected").val();
-    let topping = $("#toppings option:selected").val();
+    let toppings = $("#toppings option:selected").val();
     let number = $("#number").val();
-    console.log(size);
+    console.log(size, flavour, toppings);
 
-    //Function order
-    let order = (f, s, c, t, n, total) => {
-        return {f, s, c, t, n, total};
+    let order = (f, s, t, n, total) => {
+        return {f, s, t, n, total};
     };
+    var price, total;
 
+    if (size == "small") {
+        price=300;
+    }else if (size == "medium"){
+        price=600;
+    }else if (size =="large"){
+        price=1200;
+    }else  {
+        return false;
 
-
+    } 
+    console.log(price);
+    
     switch (toppings) {
         case toppings = "pepperoni":
-            totalPrice = totalPrice + 100;
+            totalPrice = (price + 100) * number;
             break;
         case toppings = "macon":
-            totalPrice = totalPrice + 150;
+            totalPrice = (price + 150) * number;
             break;
         case toppings = "steak":
-            totalPrice = totalPrice + 200;
+            totalPrice = (price + 200) * number;
             break;
         case toppings = "ham":
-            totalPrice = totalPrice + 100;
+            totalPrice = (price + 100) * number;
             break;
         case toppings = "cheese":
-            totalPrice = totalPrice + 100;
+            totalPrice = (price + 100) * number;
             break;
         case toppings = "onions":
-            totalPrice = totalPrice + 80;
+            totalPrice = (price + 80) * number;
             break;
         case toppings = "chilli":
-            totalPrice = totalPrice + 50;
+            totalPrice = (price + 50) * number;
             break;
         case toppings = "mushroom":
-            totalPrice = totalPrice + 80;
+            totalPrice = (price + 80) * number;
             break;
     }
+    console.log(totalPrice);
 
-    let newOrder = order(flavour, size, crust, topping, number,);
+    let newOrder = order(flavour, size, toppings, number,totalPrice);
     console.log(newOrder); // test func
 
-    $('#list').text(" ");
-    $("#list").append("<br>" + "flavour :   " + newOrder.f + "<br>" + "size :   "
-        + newOrder.s + "<br>" + "crust :     "
-        + newOrder.c + "<br>" + "toppings :     "
-        + newOrder.t + "<br>" + " number of pizzas :    "
-        + newOrder.n + "<br>" + "total Price :  ")
+   
+$(".deliver").click(function () {
+    prompt ("PLEASE INPUT YOUR LOCATION" + "delivery fee is Sh. 150");
 });
+$('#list').text(" ");
+$("#list").append("<br>" + "flavour :   " 
+    + newOrder.f + "<br>" + "size :   "
+    //+ newOrder.s + "<br>" + "crust :     "//
+    + newOrder.c + "<br>" + "toppings :     "
+    + newOrder.t + "<br>" + " number of pizzas :    "
+    + newOrder.n + "<br>" + "total :  "
+    + newOrder.total + "<br>" )
+});
+   
