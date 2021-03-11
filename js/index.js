@@ -67,4 +67,4 @@ $("#list").append("<br>" + "flavour :   "
     + newOrder.n + "<br>" + "total :  "
     + newOrder.total + "<br>" )
 });
-   
+  
